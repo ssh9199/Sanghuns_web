@@ -216,7 +216,7 @@ blockquote cite {
 }
 blockquote cite:before { content: "\2014 \0020"; }
 blockquote cite a,
-blockquote cite a:visited { color: #8B9798; border: none }
+blockquote cite a:visited { color: #000000; border: none }
 
 /* ---------------------------------------------------------------------
 /*  Pull Quotes Markup
@@ -801,7 +801,3 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
-
-
-
