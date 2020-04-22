@@ -133,6 +133,7 @@ header .scrolldown a:hover { color: #11ABB0; }
 #nav-wrap {
    font: 12px 'opensans-bold', sans-serif;
    width: 100%;
+   height: 5%;
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
@@ -141,7 +142,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    left: 0;
    top: 0;
 }
-.opaque { background-color: rgba(#333333, 0.54); }
+.opaque { background-color: #000000;}
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
@@ -158,6 +159,7 @@ ul#nav li {
    list-style: none;
    height: 48px;
    display: inline-block;
+   text-align: center;
 }
 
 /* Links */
@@ -203,8 +205,8 @@ ul#nav li.current a { color: #ff2b2b; }
    letter-spacing: 1px;
 }
 .common h1 span {
-   border-bottom: 2px solid #ad5be6;
-   padding-bottom: 6px;
+   border-bottom : 2px solid #d04a4a;
+   padding-bottom: 8px;
 }
 .common h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
@@ -233,71 +235,6 @@ ul#nav li.current a { color: #ff2b2b; }
    margin-top: 6px;
 }
 
-/*----------------------------------------------*/
-/*	Skill Bars
-/*----------------------------------------------*/
-
-.bars {
-	width: 95%;
-	float: left;
-	padding: 0;
-	text-align: left;
-}
-.bars .skills {
-  	margin-top: 36px;
-   list-style: none;
-}
-.bars li {
-   position: relative;
-  	margin-bottom: 60px;
-  	background: #ccc;
-  	height: 42px;
-  	border-radius: 3px;
-}
-.bars li em {
-	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
-	text-transform: uppercase;
-   letter-spacing: 2px;
-	font-weight: normal;
-   position: relative;
-	top: -36px;
-}
-.bar-expand {
-   position: absolute;
-   left: 0;
-   top: 0;
-
-   margin: 0;
-   padding-right: 24px;
-   display: inline-block;
-  	height: 42px;
-   line-height: 42px;
-   border-radius: 3px 0 0 3px;
-}
-
-.photo_ill {
-  	width: 85%;
-    background-color: #62d7a6;
-}
-.unity_andr {
-  	width: 80%;
-    background-color: #df7daf;
-}
-.c {
-  	width: 80%;
-    background-color: #2575b6;
-}
-.java {
-  	width: 70%;
-    background-color: #dfb86b;
-}
-.web {
-  	width: 65%;
-    background-color: #8066d6;
-}
-
-
 /* ------------------------------------------------------------------ */
 /* e. menu Section
 /* ------------------------------------------------------------------ */
@@ -317,8 +254,8 @@ ul#nav li.current a { color: #ff2b2b; }
 }
 
 #menu h1 span {
-   border-bottom: 2px solid #ad5be6;
-   padding-bottom: 6px;
+   border-bottom : 2px solid #d04a4a;
+   padding-bottom: 8px;
 }
 
 /* menu Content */

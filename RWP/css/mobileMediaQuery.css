@@ -47,16 +47,6 @@
    }
 
 
-   /* About Section
-   ------------------------------------------------------------------- */
-   #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
-   }
-   #about .contact-details { width: 50%; }
-   #about .download { width: 50%; }
-
    /* common Section
    ------------------------------------------------------------------- */
    .common h1 { font: 16px/24px 'opensans-bold', sans-serif; }
@@ -111,15 +101,15 @@
    #nav-wrap > a {
 	   width: 48px;
 		height: 48px;
-		text-align: left;
-		background-color: #d20000;
+		text-align: center;
+		background-color: #000000;
 		position: relative;
       border: none;
       float: right;
 
       font: 0/0 a;
       text-shadow: none;
-      color: transparcommon
+      color: transparcommon;
 
       position: relative;
       top: 0px;
@@ -166,21 +156,18 @@
    }
 
    ul#nav li {
-      display: block;
+      display: table;
       height: auto;
       margin: 0 auto;
-      padding: 0 4%;
-      text-align: left;
-      border-bottom: 1px solid #2D2E34;
-      border-bottom-style: dotted;
+      text-align: center;
    }
 
    ul#nav li a {
-      display: block;
+      display: table;
       margin: 0;
       padding: 0;
       margin: 12px 0;
-      line-height: 16px; /* reset line-height from 48px */
+      line-height: 20px; /* reset line-height from 48px */
       border: none;
    }
 
@@ -211,17 +198,6 @@
 
     /* scrolldown link */
    header .scrolldown { display: none; }
-
-
-   /* About Section
-   -------------------------------------------------------------------- */
-   #about .profile-pic { display: none; }
-   #about .download .button {
-      width: 100%;
-      text-align: center;
-      padding: 15px 20px;
-   }
-   #about .main-col { padding-right: 30px; }
 
 
    /* common Section
