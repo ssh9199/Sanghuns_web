@@ -23,10 +23,10 @@
          });
      });
 
-     var resizing_contents = ['#home', '#page1', '#page2', '#page3'];
-
-
      /* ------------ Height resize ------------ */
+
+     var resizing_contents = ['#home', '#page1', '#page2', '#page3', '#footer'];
+
      for(var i=0 ; i<resizing_contents.length ; ++i){
          $(resizing_contents[i]).css({
              'height': $(window).height()
@@ -42,4 +42,7 @@
              });
          }
      });
+
+     /* ------------ scroll icon display ------------ */
+
  });
