@@ -4,6 +4,7 @@ window.onload = function() {
         // 개별적으로 Wheel 이벤트 적용
         $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
             e.preventDefault();
+            event.stopPropagation();
             var delta = 0;
             if (!event) event = window.event;
             if (event.wheelDelta) {
@@ -15,6 +16,21 @@ window.onload = function() {
             var elmSelecter = $(elm).eq(index);
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
+                if ($(elmSelecter).next() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).next().offset().top;
+                    } catch (e) {}
+                }
+                // 마우스휠을 아래에서 위로
+            } else {
+                if ($(elmSelecter).prev() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).prev().offset().top;
+                    } catch (e) {}
+                }
+            }
+
+            if (t_delta < 0) {
                 if ($(elmSelecter).next() != undefined) {
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
