@@ -1,0 +1,84 @@
+/*---Default---*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/*---------------------*/
+header, #page1, #page2, #page3 {
+    position: relative;
+    width: 100%;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: left;
+    align-content: center;
+    overflow: hidden;
+}
+
+header {
+    background: #000000 url(../images/bg/background.png) no-repeat top center;
+}
+#page1 {
+    background: #000000 url(../images/bg/1.png) no-repeat top center;
+}
+#page2 {
+    background: #000000 url(../images/bg/2.png) no-repeat top center;
+}
+#page3 {
+    background: #000000 url(../images/bg/3.png) no-repeat top center;
+}
+
+nav.top {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 17%;
+    padding: 1rem;
+    color: white;
+    padding-right: 30px;
+    background: rgba(1, 1, 1, 0.57);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 5px;
+}
+nav.bottom {
+    z-index: 9999;
+    position: fixed;
+    bottom:2%;
+    right: 30%;
+    height: 10%;
+    width: auto;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.tex {
+    position: absolute;
+    width: 90%;
+    padding-left: 5%;
+    max-width: 700px;
+    height: auto;
+    align: center;
+    top: 300px;
+}
