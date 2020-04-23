@@ -49,6 +49,8 @@ window.onload = function() {
 
 
         $(this).on("touchstart", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             lastY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
         });
 
