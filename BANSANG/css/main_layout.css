@@ -21,7 +21,8 @@ time, mark, audio, video {
 }
 
 /*---------------------*/
-header, #page1, #page2, #page3 {
+
+#home, #page1, #page2, #page3 {
     position: relative;
     width: 100%;
     background-size: cover !important;
@@ -31,7 +32,7 @@ header, #page1, #page2, #page3 {
     overflow: hidden;
 }
 
-header {
+#home {
     background: #000000 url(../images/bg/background.png) no-repeat top center;
 }
 #page1 {
@@ -48,37 +49,56 @@ nav.top {
     z-index: 9999;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
-    height: 17%;
-    padding: 1rem;
-    color: white;
-    padding-right: 30px;
-    background: rgba(1, 1, 1, 0.57);
-    display: flex;
+    height: auto;
     align-items: center;
-    justify-content: space-between;
-    letter-spacing: 5px;
+    color: white;
+    right: 43px;
+    top:55px;
+    display: flex;
+}
+.top{
+    height: 10%;
+    width: auto;
 }
 nav.bottom {
     z-index: 9999;
     position: fixed;
-    bottom:2%;
-    right: 30%;
-    height: 10%;
+    bottom:20px;
+    right: 3%;
+    height: auto;
     width: auto;
-    padding: 1rem;
     color: white;
     display: flex;
     align-items: center;
 }
 
+nav.whiteButtons{
+    text-align: right;
+    vertical-align: middle;
+    position: relative;
+    right: 32px;
+    top:140px;
+}
+
+.logo {
+    position: absolute;
+    top:20%;
+    transform:translate(0,-50%);
+    width: 40%;
+    padding-left: 5%;
+    max-width: 200px;
+    min-width: 250px;
+}
+
 .tex {
     position: absolute;
-    width: 90%;
+    top:50%;
+    transform:translate(0,-50%);
+    width: 65%;
     padding-left: 5%;
-    max-width: 700px;
+    max-width: 500px;
+    max-height: 360px;
+    min-width: 250px;
     height: auto;
-    align: center;
-    top: 300px;
 }

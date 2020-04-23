@@ -23,7 +23,7 @@
          });
      });
 
-     var resizing_contents = ['header', '#page1', '#page2', '#page3'];
+     var resizing_contents = ['#home', '#page1', '#page2', '#page3'];
 
 
      /* ------------ Height resize ------------ */
@@ -31,13 +31,15 @@
          $(resizing_contents[i]).css({
              'height': $(window).height()
          });
-         $(window).on('resize', function() {
+     }
+     $(window).on('resize', function() {
+         $('body').css({
+             'width': $(window).width()
+         });
+         for(var i=0 ; i<resizing_contents.length ; ++i){
              $(resizing_contents[i]).css({
                  'height': $(window).height()
              });
-             $('body').css({
-                 'width': $(window).width()
-             })
-         });
-     }
+         }
+     });
  });
