@@ -5,6 +5,8 @@ $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preven
 
 window.onload = function() {
     $(elm).each(function(index) {
+
+        //touch
         var startY = 0,
             endY = 0;
         $(this).on('touchstart', function(event) {
@@ -27,15 +29,17 @@ window.onload = function() {
                     } catch (e) {}
                 }
             }
-            // 화면 이동 0.8초(800)
+
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
                 duration: 600,
-                complete: function() {}
+                complete: function() { startY=0; endY=0; }
             });
         });
 
+
+        //mouse click
         var mstartY = 0,
             mendY = 0;
         $(this).on('mousedown', function(event) {
@@ -58,16 +62,21 @@ window.onload = function() {
                     } catch (event) {}
                 }
             }
-            // 화면 이동 0.8초(800)
+
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
                 duration: 600,
-                complete: function() {}
+                complete: function() { startY=0; endY=0; }
             });
         });
-        // 개별적으로 Wheel 이벤트 적용
-        $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
+
+        $(".body").on("scroll touchmove",function(e){
+            e.preventDefault();
+        });
+
+        // mouse wheel
+        $(this).on("mousewheel DOMMouseScroll", function(e) {
             e.preventDefault();
             var delta = 0;
             if (!event) event = window.event;
@@ -104,12 +113,11 @@ window.onload = function() {
                 }
             }
 
-            // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
                 duration: 600,
-                complete: function() {}
+                complete: function() { delta=0; }
             });
         });
     });
