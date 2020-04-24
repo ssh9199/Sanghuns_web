@@ -1,18 +1,20 @@
 @font-face {
     font-family: 'YD';
-    src: url('font/YDIYGO310.eot');
-    src: url('font/YDIYGO310.eot?#iefix') format('embedded-opentype'),
-        url('font/YDIYGO310.woff2') format('woff2'),
-        url('font/YDIYGO310.woff') format('woff');
+    src: url('../font/YDIYGO310.eot');
+    src: url('../font/YDIYGO310.ttf');
+    src: url('../font/YDIYGO310.eot?#iefix') format('embedded-opentype'),
+        url('../font/YDIYGO310.woff2') format('woff2'),
+        url('../font/YDIYGO310.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'BM';
-    src: url('font/BMDoHyeon.eot');
-    src: url('font/BMDoHyeon.eot?#iefix') format('embedded-opentype'),
-        url('font/BMDoHyeon.woff2') format('woff2'),
-        url('font/BMDoHyeon.woff') format('woff');
+    src: url('../font/BMDoHyeon.eot');
+    src: url('../font/BMDoHyeon.ttf');
+    src: url('../font/BMDoHyeon.eot?#iefix') format('embedded-opentype'),
+        url('../font/BMDoHyeon.woff2') format('woff2'),
+        url('../font/BMDoHyeon.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

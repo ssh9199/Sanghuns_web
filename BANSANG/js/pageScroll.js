@@ -1,12 +1,17 @@
+var elm = ".box";
+
+$(".body").on("touchstart touchend scroll touchmove mousewheel DOMMouseScroll", function(e){
+    e.preventDefault();
+});
+
+
 window.onload = function() {
-
-    var elm = ".box";
-
     $(elm).each(function(index) {
 
         var startY = 0,
             endY = 0;
         $(this).on('touchstart', function(event) {
+            event.preventDefault();
             startY = event.originalEvent.changedTouches[0].screenY;
         });
         $(this).on('touchend', function(event) {
@@ -30,7 +35,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800,
+                duration: 600,
                 complete: function() {}
             });
         });
@@ -61,7 +66,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800,
+                duration: 600,
                 complete: function() {}
             });
         });
@@ -107,7 +112,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800,
+                duration: 600,
                 complete: function() {}
             });
         });
