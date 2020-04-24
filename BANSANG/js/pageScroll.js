@@ -40,6 +40,7 @@ window.onload = function() {
             mendY = 0;
         $(this).on('mousedown', function(event) {
             mstartY = event.pageY;
+<<<<<<< HEAD
         });
         $(this).on('mouseup', function(event) {
             mendY = event.pageY;
@@ -69,6 +70,36 @@ window.onload = function() {
         // 개별적으로 Wheel 이벤트 적용
         $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
             e.preventDefault();
+=======
+        });
+        $(this).on('mouseup', function(event) {
+            mendY = event.pageY;
+            var moveTop = $(window).scrollTop();
+            var elmSelecter = $(elm).eq(index);
+            if (mstartY - mendY > 50) {
+                if ($(elmSelecter).next() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).next().offset().top;
+                    } catch (event) {}
+                }
+            } else if (mendY - mstartY > 50) {
+                if ($(elmSelecter).prev() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).prev().offset().top;
+                    } catch (event) {}
+                }
+            }
+            // 화면 이동 0.8초(800)
+            $("html,body").stop().animate({
+                scrollTop: moveTop + 'px'
+            }, {
+                duration: 600,
+                complete: function() {}
+            });
+        });
+        // 개별적으로 Wheel 이벤트 적용
+        $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
+>>>>>>> 376b8bea55bdd3889823e75f981d3c2102b8be83
             var delta = 0;
             if (!event) event = window.event;
             if (event.wheelDelta) {
