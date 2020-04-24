@@ -71,7 +71,7 @@ window.onload = function() {
             });
         });
 
-        $(".body").on("scroll touchmove",function(e){
+        $(this).on("scroll touchmove",function(e){
             e.preventDefault();
         });
 
