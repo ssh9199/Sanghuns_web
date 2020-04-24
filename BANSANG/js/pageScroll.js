@@ -1,10 +1,15 @@
-var elm = ".box";
-
-$(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
-
 
 window.onload = function() {
+    var elm = ".box";
+
+    $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
+
     $(elm).each(function(index) {
+
+        if($(this) == ".kakao" || $(this) == ".scro")
+        {
+
+        }
 
         //touch
         var startY = 0,
@@ -97,18 +102,18 @@ window.onload = function() {
                     } catch (e) {}
                 } else {
                     try {
-                        moveTop = $(elmSelecter).current().offset().top;
+                        moveTop = $(elmSelecter).current().offset().bottom;
                     } catch (e) {}
                 }
                 // 마우스휠을 아래에서 위로
-            } else {
+            } else if(delta >0) {
                 if ($(elmSelecter).prev() != undefined) {
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (e) {}
-                } else {
+                } else { // undefined인 경우
                     try {
-                        moveTop = $(elmSelecter).current().offset().top;
+                        moveTop = $(elmSelecter).current().offset().bottom;
                     } catch (e) {}
                 }
             }
@@ -116,7 +121,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 600,
+                duration: 100,
                 complete: function() { delta=0; }
             });
         });
