@@ -1,17 +1,13 @@
 var elm = ".box";
 
-$(".body").on("touchstart touchend scroll touchmove mousewheel DOMMouseScroll", function(e){
-    e.preventDefault();
-});
+$(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 
 
 window.onload = function() {
     $(elm).each(function(index) {
-
         var startY = 0,
             endY = 0;
         $(this).on('touchstart', function(event) {
-            event.preventDefault();
             startY = event.originalEvent.changedTouches[0].screenY;
         });
         $(this).on('touchend', function(event) {
@@ -72,7 +68,6 @@ window.onload = function() {
         });
         // 개별적으로 Wheel 이벤트 적용
         $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
-            e.preventDefault()
             var delta = 0;
             if (!event) event = window.event;
             if (event.wheelDelta) {
