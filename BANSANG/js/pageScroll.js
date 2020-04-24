@@ -25,13 +25,13 @@ window.onload = function() {
                 if ($(elmSelecter).next() != undefined) {
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
-                    } catch (e) {}
+                    } catch (event) {}
                 }
             } else if (endY - startY > 50) {
                 if ($(elmSelecter).prev() != undefined) {
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
-                    } catch (e) {}
+                    } catch (event) {}
                 }
             }
 
@@ -100,20 +100,12 @@ window.onload = function() {
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (e) {}
-                } else {
-                    try {
-                        moveTop = $(elmSelecter).current().offset().bottom;
-                    } catch (e) {}
                 }
-                // 마우스휠을 아래에서 위로
+            // 마우스휠을 아래에서 위로
             } else if(delta >0) {
                 if ($(elmSelecter).prev() != undefined) {
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
-                    } catch (e) {}
-                } else { // undefined인 경우
-                    try {
-                        moveTop = $(elmSelecter).current().offset().bottom;
                     } catch (e) {}
                 }
             }
@@ -121,7 +113,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 100,
+                duration: 600,
                 complete: function() { delta=0; }
             });
         });
