@@ -1,16 +1,14 @@
+var elm = ".box";
+$(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
+$("#kakao").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
+
 
 window.onload = function() {
-    var elm = ".box";
 
     $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
+    $("#kakao").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 
     $(elm).each(function(index) {
-
-        if($(this) == ".kakao" || $(this) == ".scro")
-        {
-
-        }
-
         //touch
         var startY = 0,
             endY = 0;
@@ -38,7 +36,7 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 600,
+                duration: 400,
                 complete: function() { startY=0; endY=0; }
             });
         });
