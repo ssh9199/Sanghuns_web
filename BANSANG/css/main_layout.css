@@ -30,19 +30,11 @@ time, mark, audio, video {
     text-align: left;
     align-content: center;
     overflow: hidden;
+    bottom:0;
 }
 
-#home {
-    background: #000000 url(../images/bg/background.png) no-repeat top center;
-}
-#page1 {
-    background: #000000 url(../images/bg/1.png) no-repeat top center;
-}
-#page2 {
-    background: #000000 url(../images/bg/2.png) no-repeat top center;
-}
-#page3 {
-    background: #000000 url(../images/bg/3.png) no-repeat top center;
+#page1, #page2, #page3 {
+    background: #48ccde
 }
 #footer {
     background: #fff;
@@ -59,7 +51,7 @@ time, mark, audio, video {
     top : 7%;
     min-width: 80px;
     max-width: 100px;
-    transform:translate(0,10%);
+    transform:translate(0,20%);
     display: flex;
 }
 #kakao a{
@@ -78,18 +70,12 @@ time, mark, audio, video {
     top:21%;
     width:20%;
     min-width: 150px;
-    max-width: 230px;
+    max-width: 190px;
     letter-spacing: 2%;
-    transform:translate(0,-10%);
-    text-align: center;
+    transform:translate(0,5%);
+    text-align: right;
     z-index: 300;
 }
-
-#whiteButtons img{
-    display: inline-block;
-    width:25%;
-}
-
 
 nav#scro {
     z-index: 100;
@@ -120,43 +106,45 @@ nav#scro {
     width: auto;
 }
 
-.tex {
-    position: absolute;
-    top:50%;
-    transform:translate(0,-50%);
-    height: 35%;
-    padding-left: 5%;
-    max-width: 400px;
-    max-height: 260px;
-    min-height: 120px;
-    width: auto;
-}
 .textContainer {
     position:absolute;
     color: #fff;
-    text-shadow: 0px 0px 15px black;
     left:5%;
-    top:66.5%;
+    top:53%;
     height: 50%;
     transform:translate(0,-50%);
     text-align: left;
 }
 
+#home {
+    background: #000000 url(../images/bg/background-desktop.png) no-repeat top center;
+}
+    .textContainer {
+    position:absolute;
+    color: #fff;
+    left:5%;
+    top:75%;
+    height: 80%;
+    transform:translate(0,-50%);
+    text-align: left;
+}
 .box .textContainer h1{
     font-family: 'BM', sans-serif;
-    font-size: 1.035em;
+    font-size: 0.8em;
 }
-
-.box .textContainer h3{
+    .box .textContainer h3{
     font-family: 'YD', sans-serif;
     font-weight: bold;
     font-size: 0.517em;
+}
+    #whiteButtons img{
+    display: inline-block;
+    width:30%;
 }
 
 .box #home .textContainer {
     color:inherit;
     color:#333333;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
 .box #footer .textContainer {
@@ -166,20 +154,19 @@ nav#scro {
     transform:translate(0,-50%);
     color:inherit;
     color:#555555;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
 .box #footer .textContainer a{
 
     color:inherit;
     font-family: 'BM', sans-serif;
-    font-size: 0.82em;
+    font-size: 0.66em;
     text-decoration: none;
     color:#555555;
 }
 
 .box .textContainer img{
-    width: 10%;
+    width: 15%;
     padding-top: 3%;
     padding-bottom: 5%;
     max-width: : 90px;
@@ -191,7 +178,38 @@ nav#scro {
     position: inherit;
     position: relative;
     font-family: 'YD', sans-serif;
-    font-size: 0.6em;
+    font-size: 0.49em;
     text-decoration: none;
     color:#555555;
+}
+
+.bgbg{
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+}
+.bg-m {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width:50%;
+    min-width: 700px;
+    max-width: 1000px;
+
+}
+
+#page2 .bg-m{
+    right:15%;
+    bottom:20%;
+    min-width: 200px;
+    max-width: 300px;
+    width:45%;
+}
+
+#page3 .bg-m{
+    bottom:23%;
+    right:15%;
+    min-width: 200px;
+    max-width: 400px;
+    width:45%;
 }

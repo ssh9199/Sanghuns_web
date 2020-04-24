@@ -1,5 +1,71 @@
-@media only screen and (max-width: 767px) {
-    header nav.top ul a.hiding {
-        display:none;
+@media screen and (max-width: 768px){
+
+    #home {
+        background: #000000 url(../images/bg/background-mobile.png) no-repeat top center;
     }
+
+    .textContainer {
+        position:absolute;
+        color: #fff;
+        left:5%;
+        top:53%;
+        height: 50%;
+        transform:translate(0,-50%);
+        text-align: left;
+    }
+
+    .box .textContainer h1{
+        font-family: 'BM', sans-serif;
+        font-size: 0.8em;
+    }
+
+    .box .textContainer h3{
+        font-family: 'YD', sans-serif;
+        font-weight: bold;
+        font-size: 0.37em;
+    }
+
+    #whiteButtons img{
+        display: inline-block;
+        width:20%;
+    }
+
+    .box #footer .textContainer a{
+        font-size: 0.52em;
+    }
+
+    .box .textContainer img{
+        width: 12%;
+    }
+
+    .box .textContainer h4{
+        font-size: 0.45em;
+    }
+
+    #home .bg-m {
+        position: absolute;
+        bottom: 0;
+        left:12%;
+        width:60%;
+        min-width: 500px;
+        max-width: 700px;
+    }
+    #page1 .bg-m {
+        position: absolute;
+        bottom: 0;
+        left:15%;
+        width:60%;
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    #page3 .bg-m{
+        bottom:15%;
+        left:50%;
+        transform: translate(-45%,0);
+        min-width: 200px;
+        max-width: 230px;
+        width:40%;
+    }
+
 }
