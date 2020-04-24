@@ -1,24 +1,84 @@
+var elm = ".box";
+
+$(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
+
+
 window.onload = function() {
-    var elm = ".box";
-    var moving = false;
-    var lastY = null;
     $(elm).each(function(index) {
+        var startY = 0,
+            endY = 0;
+        $(this).on('touchstart', function(event) {
+            startY = event.originalEvent.changedTouches[0].screenY;
+        });
+        $(this).on('touchend', function(event) {
+            endY = event.originalEvent.changedTouches[0].screenY;
+            var moveTop = $(window).scrollTop();
+            var elmSelecter = $(elm).eq(index);
+            if (startY - endY > 50) { // 아래로
+                if ($(elmSelecter).next() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).next().offset().top;
+                    } catch (e) {}
+                }
+            } else if (endY - startY > 50) {
+                if ($(elmSelecter).prev() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).prev().offset().top;
+                    } catch (e) {}
+                }
+            }
+            // 화면 이동 0.8초(800)
+            $("html,body").stop().animate({
+                scrollTop: moveTop + 'px'
+            }, {
+                duration: 600,
+                complete: function() {}
+            });
+        });
+
+        var mstartY = 0,
+            mendY = 0;
+        $(this).on('mousedown', function(event) {
+            mstartY = event.pageY;
+        });
+        $(this).on('mouseup', function(event) {
+            mendY = event.pageY;
+            var moveTop = $(window).scrollTop();
+            var elmSelecter = $(elm).eq(index);
+            if (mstartY - mendY > 50) {
+                if ($(elmSelecter).next() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).next().offset().top;
+                    } catch (event) {}
+                }
+            } else if (mendY - mstartY > 50) {
+                if ($(elmSelecter).prev() != undefined) {
+                    try {
+                        moveTop = $(elmSelecter).prev().offset().top;
+                    } catch (event) {}
+                }
+            }
+            // 화면 이동 0.8초(800)
+            $("html,body").stop().animate({
+                scrollTop: moveTop + 'px'
+            }, {
+                duration: 600,
+                complete: function() {}
+            });
+        });
         // 개별적으로 Wheel 이벤트 적용
         $(this).on("scroll touchmove mousewheel DOMMouseScroll", function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            var currentY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
             var delta = 0;
-            var t_delta = currentY - lastY;
             if (!event) event = window.event;
             if (event.wheelDelta) {
-                delta = event.wheelDelta / 10;
+                delta = event.wheelDelta / 120;
                 if (window.opera) delta = -delta;
             } else if (event.detail)
                 delta = -event.detail / 3;
+
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
-
 
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
@@ -26,66 +86,30 @@ window.onload = function() {
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (e) {}
+                } else {
+                    try {
+                        moveTop = $(elmSelecter).current().offset().top;
+                    } catch (e) {}
                 }
-                else {return;}
-            } else if (delta > 0) {
+                // 마우스휠을 아래에서 위로
+            } else {
                 if ($(elmSelecter).prev() != undefined) {
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (e) {}
+                } else {
+                    try {
+                        moveTop = $(elmSelecter).current().offset().top;
+                    } catch (e) {}
                 }
-                else {return;}
             }
+
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 300,
-                complete: function() {
-                    moving = false;
-                }
-            });
-        });
-
-
-        $(this).on("touchstart", function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            lastY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
-        });
-
-        $(this).on("touchend", function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            var currentY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
-            var delta = currentY - lastY;
-            var moveTop = $(window).scrollTop();
-            var elmSelecter = $(elm).eq(index);
-
-            // 터치를 위에서 아래로
-            if (delta < 0) {
-                if ($(elmSelecter).next() != undefined) {
-                    try {
-                        moveTop = $(elmSelecter).next().offset().top;
-                    } catch (e) {}
-                }
-                else {return;}
-            } else if (delta > 0) {
-                if ($(elmSelecter).prev() != undefined) {
-                    try {
-                        moveTop = $(elmSelecter).prev().offset().top;
-                    } catch (e) {}
-                }
-                else {return;}
-            }
-            // 화면 이동 0.8초(800)
-            $("html,body").stop().animate({
-                scrollTop: moveTop + 'px'
-            }, {
-                duration: 100,
-                complete: function() {
-                    moving = false;
-                }
+                duration: 600,
+                complete: function() {}
             });
         });
     });

@@ -2,8 +2,8 @@
 
      /* ------------ FitText Settings ------------ */
      setTimeout(function() {
-         $('h1').fitText(1, {
-             minFontSize: '40px',
+         $('.textContainer').fitText(1, {
+             minFontSize: '20px',
              maxFontSize: '90px'
          });
      }, 100);

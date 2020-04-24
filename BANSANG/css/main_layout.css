@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 /*---------------------*/
 
-#home, #page1, #page2, #page3 {
+#home, #page1, #page2, #page3, #footer {
     position: relative;
     width: 100%;
     background-size: cover !important;
@@ -43,6 +43,9 @@ time, mark, audio, video {
 }
 #page3 {
     background: #000000 url(../images/bg/3.png) no-repeat top center;
+}
+#footer {
+    background: #fff;
 }
 
 #kakao {
@@ -72,7 +75,7 @@ time, mark, audio, video {
 #whiteButtons{
     position: absolute;
     right:5%;
-    top:24%;
+    top:21%;
     width:20%;
     min-width: 150px;
     max-width: 230px;
@@ -103,8 +106,8 @@ nav#scro {
     position: absolute;
     top : 10%;
     transform:translate(0,-10%);
-    height: 20%;
-    padding-left: 5%;
+    height: 17%;
+    padding-left: 8%;
     max-height: 130px;
     min-height: 80px;
     width: auto;
@@ -120,4 +123,68 @@ nav#scro {
     max-height: 260px;
     min-height: 120px;
     width: auto;
+}
+.textContainer {
+    position:absolute;
+    color: #fff;
+    text-shadow: 0px 0px 15px black;
+    left:5%;
+    top:66.5%;
+    height: 50%;
+    transform:translate(0,-50%);
+    text-align: left;
+}
+
+.box .textContainer h1{
+    font-family: 'BM', sans-serif;
+    font-size: 1.035em;
+}
+
+.box .textContainer h3{
+    font-family: 'YD', sans-serif;
+    font-weight: bold;
+    font-size: 0.517em;
+}
+
+.box #home .textContainer {
+    color:inherit;
+    color:#333333;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+}
+
+.box #footer .textContainer {
+
+    top:50%;
+    height: 40%;
+    transform:translate(0,-50%);
+    color:inherit;
+    color:#555555;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+}
+
+.box #footer .textContainer a{
+
+    color:inherit;
+    font-family: 'BM', sans-serif;
+    font-size: 0.82em;
+    text-decoration: none;
+    color:#555555;
+}
+
+.box .textContainer img{
+    width: 10%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    max-width: : 90px;
+    height:auto;
+}
+
+.box .textContainer h4{
+    color:inherit;
+    position: inherit;
+    position: relative;
+    font-family: 'YD', sans-serif;
+    font-size: 0.6em;
+    text-decoration: none;
+    color:#555555;
 }
