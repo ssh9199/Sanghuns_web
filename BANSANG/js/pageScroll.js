@@ -25,13 +25,21 @@ window.onload = function() {
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
             if (startY - endY > 50) { // 아래로
+                last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
+                    next=1;
+                    if(!last) elmSelecter.find('.bgbg').fadeOut(300);
+                    else elmSelecter.find('.bgbg').fadeIn(500);
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
                 }
             } else if (endY - startY > 50) {
+                first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
+                    next=-1;
+                    if(!first) elmSelecter.find('.bgbg').fadeOut(300);
+                    else elmSelecter.find('.bgbg').fadeIn(500);
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
@@ -60,13 +68,21 @@ window.onload = function() {
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
             if (mstartY - mendY > 50) {
+                last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
+                    next=1;
+                    if(!last) elmSelecter.find('.bgbg').fadeOut(300);
+                    else elmSelecter.find('.bgbg').fadeIn(500);
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
                 }
             } else if (mendY - mstartY > 50) {
+                first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
+                    next=-1;
+                    if(!first) elmSelecter.find('.bgbg').fadeOut(300);
+                    else elmSelecter.find('.bgbg').fadeIn(500);
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
