@@ -43,6 +43,9 @@
          }
      });
 
-     /* ------------ scroll icon display ------------ */
+     /* ------------ fadeout initially ------------ */
+    $('.box').find('.bgbg').fadeOut(0);
+    $('#home').find('.bgbg').fadeIn(1200);
+
 
  });
