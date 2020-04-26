@@ -51,6 +51,9 @@ window.onload = function() {
             }, {
                 duration: 400,
                 complete: function() {
+                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(500);
+                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(500);
+                    first = false; last = false;
                     startY=0; endY=0;
                 }
             });
@@ -92,8 +95,13 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 600,
-                complete: function() { startY=0; endY=0; }
+                duration: 400,
+                complete: function() {
+                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(500);
+                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(500);
+                    first = false; last = false;
+                    startY=0; endY=0;
+                }
             });
         });
 
@@ -114,9 +122,6 @@ window.onload = function() {
 
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
-
-            var nx = $(elmSelecter).next();
-            var pr;
 
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
