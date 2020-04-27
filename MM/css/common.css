@@ -1,0 +1,257 @@
+@charset "utf-8";
+@import url("reset.css");
+
+@font-face {
+    font-family:'NanumGothic';
+    font-weight:normal;
+    font-style:normal;
+    src:url('./font/NanumGothic.eot');
+    src:url('./font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+    url('./font/NanumGothic.woff') format('woff'),
+    url('./font/NanumGothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'NanumGothicBold';
+    font-weight:normal;
+    font-style:normal;
+    src:url('./font/NanumGothicBold.eot');
+    src:url('./font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+    url('./font/NanumGothicBold.woff') format('woff'),
+    url('./font/NanumGothicBold.ttf') format('truetype');
+}
+
+a{
+    color:#333;
+    text-decoration:none;
+}
+
+html{width:100%;height:100%;}
+body{width:100%;min-height:1050px;height:100%;position:relative}
+
+/*사용자 정의 클래스*/
+.hidden, legend{ font-size:0; line-height:0; width:0; height:0;  position: absolute; left:-9999px;}
+
+.mt25{margin-top:25px}
+.mt30{margin-top:30px}
+.mt45{margin-top:45px;}
+.mt50{margin-top:50px}
+
+.w300{width:300px;}
+.w88{width:88px;}
+
+.bt_line{border-bottom:1px solid #e0e0e0}
+
+
+.wrapper{
+    position: relative;
+    min-width:1700px;
+    height:100%;
+}
+
+
+
+/*********************************
+header
+*********************************/
+
+#header{
+    position: relative;
+    width:420px;
+    height: 100%;
+    float: left;
+    z-index: 999;
+    overflow: hidden;
+}
+
+/*********************************
+gnb_Area
+*********************************/
+#gnb_Area{
+    width:210px;
+    height: 100%;
+    float:left;
+    background:#f3eada;
+}
+
+#gnb_Area .logo{
+   margin:27px 0 0 5px;
+}
+
+#gnb_Area #gnb{
+    margin:13px 0 0 37px
+}
+
+#gnb_Area #gnb > ul > li{
+    border-bottom:1px solid #d0c4b4;
+}
+#gnb_Area #gnb > ul >li >a{
+    display: block;
+    padding-right:45px;
+    text-align:right;
+    font: bold 16px "NanumGothic";
+    height:50px;
+    line-height:50px;
+    background:url(../images/dot-menu.gif) no-repeat 145px 50% ;
+}
+
+#gnb_Area #gnb > ul >li >a.select{
+	  color:#e4161f
+}
+
+
+#gnb_Area #gnb a:hover{
+    color:#e4161f
+}
+
+#gnb_Area #gnb .gnb_sub{
+	padding:0 0 15px 0;
+	display:none
+}
+
+#gnb_Area #gnb .gnb_sub  a{
+	display:block;
+	text-align:right;
+	padding-right:48px;
+	font: 13px/1.7 "NanumGothicBold";
+}
+
+#gnb_Area #gnb .gnb_sub a.select{
+    color:#e4161f
+}
+
+#gnb_Area .tel{
+    margin:30px 0 0 0;
+    text-align:center
+}
+
+
+/*********************************
+side_bar
+*********************************/
+#side_bar{
+    width:210px;
+    float:left;
+    height: 100%;
+    background:#43362b;
+    padding-top:100px
+}
+
+#side_bar .side_banner{
+    position: relative;
+    width:210px;
+    height:200px;
+    background-position: 50% 24px ;
+    background-repeat: no-repeat;
+    text-align:center;
+    overflow: hidden;
+    transition: all .3s
+}
+
+#side_bar .side_banner h3{
+    font: bold 20px "NanumGothicBold";
+    color:#fff;
+    margin-top:112px;
+}
+
+#side_bar .side_banner p{
+    font: bold 13px "NanumGothicBold";
+    color:#979390;
+    margin-top:12px;
+}
+
+#side_bar .side_banner a{
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+#side_bar .side_banner .cross{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+#side_bar .item1{
+     background-color:#2f2720;
+     background-image:url(../images/ico_price.png);    
+}
+#side_bar .item2{
+     background-color:#3a3026;
+     background-image:url(../images/ico_menu.png);
+}
+#side_bar .item3{
+     background-color:#2f2721;
+     background-image:url(../images/ico_refill.png);
+}
+
+#side_bar .item1:hover{
+     background-image:url(../images/ico_price_over.png);
+}
+#side_bar .item2:hover{
+     background-image:url(../images/ico_menu_over.png);
+}
+#side_bar .item3:hover{
+     background-image:url(../images/ico_refill_over.png);
+}
+
+#side_bar .banner_store{
+    position: relative;
+    width:184px;
+    height:150px;
+    padding: 0 13px 0 13px;
+    margin-top:20px;
+}
+#side_bar .banner_store .tit{
+    display: block;
+    padding-bottom:10px;
+    border-bottom: 1px solid #726a62;
+    font: bold 13px "NanumGothicBold";
+    color:#726a62;
+}
+
+#side_bar .banner_store .ico{
+    position: absolute;
+    top:0;
+    right:15px;
+}
+
+#side_bar .banner_store .img{
+    margin-top:12px;
+    opacity:0.7;
+    transition: all .3s
+}
+
+#side_bar .banner_store a:hover .img{
+    opacity: 1
+}
+
+/*********************************
+footer
+*********************************/
+#footer{
+    clear:both;
+    position: absolute;
+    width: 210px;
+    top: 800px;
+    z-index: 999;
+}
+#footer .address{
+    color: #a09a8b;
+    font: 12px/1.7 "NanumGothicBold";
+    text-align:center
+}
+
+
+/*********************************
+#sub_content
+*********************************/
+
+#sub_content{
+    position: relative;
+    width:830px;
+    float:left;
+    z-index: 100;
+    background:#fff url(../images/sub/sub_top_img.jpg) no-repeat 0 0;
+    padding:200px 60px 100px 60px;
+}
