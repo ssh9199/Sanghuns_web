@@ -20,6 +20,7 @@ function gnb(){
         $submenuLists = $gnb.find(".gnb_sub a");
     }
 
+/*
     function initEvent(){
         $menuLists.on("click",function(e){
             if($(this).next(".gnb_sub").length != 0){

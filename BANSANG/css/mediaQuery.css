@@ -1,34 +1,66 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1280px){
+
+        .textContainer {
+            left:20%;
+            top:60%;
+            height: 60%;
+            transform:translate(0,-53%);
+        }
+        #kakao {
+            right:20%
+        }
+        .logo {
+            left:20%;
+        }
+
+        #whiteButtons{
+            right:20%;
+            transform:translate(-120px,-50%);
+        }
+        .bg-m {
+            right:9%;
+        }
+
+        .box .textContainer h3{
+            font-size: 0.37em;
+        }
+}
+
+
+@media screen and (max-width: 780px){
+
+    #kakao {
+        right:6%;
+        width:80px;
+    }
+
+    #whiteButtons img{
+        display: none;
+    }
 
     #home {
         background: #000000 url(../images/bg/background-mobile.png) no-repeat top center;
     }
 
+    .logo {
+        left: 10%;
+    }
+
     .textContainer {
-        position:absolute;
-        color: #fff;
-        left:5%;
-        top:53%;
-        height: 50%;
+        left:10%;
+        top:56%;
+        height: 56%;
         transform:translate(0,-50%);
-        text-align: left;
     }
 
     .box .textContainer h1{
-        font-family: 'BM', sans-serif;
         font-size: 0.8em;
     }
 
     .box .textContainer h3{
-        font-family: 'YD', sans-serif;
-        font-weight: bold;
         font-size: 0.37em;
     }
 
-    #whiteButtons img{
-        display: inline-block;
-        width:20%;
-    }
 
     .box #footer .textContainer a{
         font-size: 0.52em;
@@ -40,6 +72,10 @@
 
     .box .textContainer h4{
         font-size: 0.45em;
+    }
+
+    #scro {
+        left:10%;
     }
 
     #home .bg-m {

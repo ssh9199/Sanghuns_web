@@ -57,7 +57,7 @@ header
 
 #header{
     position: relative;
-    width:420px;
+    width:210px;
     height: 100%;
     float: left;
     z-index: 999;
@@ -128,7 +128,7 @@ gnb_Area
 
 /*********************************
 side_bar
-*********************************/
+*********************************
 #side_bar{
     width:210px;
     float:left;
@@ -174,7 +174,7 @@ side_bar
 
 #side_bar .item1{
      background-color:#2f2720;
-     background-image:url(../images/ico_price.png);    
+     background-image:url(../images/ico_price.png);
 }
 #side_bar .item2{
      background-color:#3a3026;
@@ -224,7 +224,7 @@ side_bar
 
 #side_bar .banner_store a:hover .img{
     opacity: 1
-}
+} */
 
 /*********************************
 footer

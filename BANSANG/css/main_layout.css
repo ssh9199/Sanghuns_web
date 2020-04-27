@@ -43,15 +43,13 @@ time, mark, audio, video {
 #kakao {
     position: fixed;
     z-index: 9999;
-    width: 10%;
+    width: 100px;
     height: auto;
     align-items: center;
     color: white;
-    right: 5%;
-    top : 7%;
-    min-width: 80px;
-    max-width: 100px;
-    transform:translate(0,20%);
+    right: 30%;
+    top : 16%;
+    transform:translate(0,-50%);
     display: flex;
 }
 #kakao a{
@@ -66,22 +64,25 @@ time, mark, audio, video {
 
 #whiteButtons{
     position: absolute;
-    right:5%;
-    top:21%;
-    width:20%;
-    min-width: 150px;
-    max-width: 190px;
-    letter-spacing: 2%;
-    transform:translate(0,5%);
+    right:30%;
+    top:16%;
+    width:140px;
+    letter-spacing: 5%;
+    transform:translate(-120px,-50%);
     text-align: right;
     z-index: 300;
+}
+
+#whiteButtons img{
+    display: inline-block;
+    width:24%;
 }
 
 nav#scro {
     z-index: 100;
     position: fixed;
     bottom:20px;
-    right: 3%;
+    right: 45%;
     height: auto;
     width: auto;
     display: flex;
@@ -100,7 +101,7 @@ nav#scro {
     top : 10%;
     transform:translate(0,-10%);
     height: 17%;
-    padding-left: 8%;
+    left: 25%;
     max-height: 130px;
     min-height: 80px;
     width: auto;
@@ -122,10 +123,10 @@ nav#scro {
     .textContainer {
     position:absolute;
     color: #fff;
-    left:5%;
-    top:75%;
-    height: 80%;
-    transform:translate(0,-50%);
+    left:25%;
+    top:68%;
+    height: 68%;
+    transform:translate(0,-59%);
     text-align: left;
 }
 .box .textContainer h1{
@@ -135,11 +136,7 @@ nav#scro {
     .box .textContainer h3{
     font-family: 'YD', sans-serif;
     font-weight: bold;
-    font-size: 0.517em;
-}
-    #whiteButtons img{
-    display: inline-block;
-    width:30%;
+    font-size: 0.37em;
 }
 
 .box #home .textContainer {
@@ -191,8 +188,8 @@ nav#scro {
     z-index: 0;
     position: absolute;
     bottom: 0;
-    right:0;
-    width:50%;
+    right:23%;
+    width:30%;
     min-width: 700px;
     max-width: 1000px;
 

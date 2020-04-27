@@ -44,7 +44,9 @@
      });
 
      /* ------------ fadeout initially ------------ */
-    $('.box').find('.bgbg').fadeOut(0);
+    $('#home').fadeOut(0);
+    $(document).find('.bgbg').fadeOut(0);
+    $('#home').fadeIn(1200);
     $('#home').find('.bgbg').fadeIn(1200);
 
 

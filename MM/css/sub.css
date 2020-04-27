@@ -37,7 +37,7 @@
 .cibi{height:612px;}
 .organization{height:578px}
 
-.intro h3{ 
+.intro h3{
     margin-bottom:30px;
     height:75px;
 }
@@ -149,7 +149,7 @@
   overflow:hidden;
   position: relative;
   z-index: 10;
-  
+
 }
 .menulist p{
     font: 16px "NanumGothicBold";
@@ -158,7 +158,7 @@
     text-align:center;
     padding-left:10px;
     letter-spacing: -1px
-    
+
 }
 .menulist p:before{
     position: relative;
@@ -217,14 +217,14 @@
 .store_search_form fieldset{
     display: block;
     width:318px;
-    height:78px;    
+    height:78px;
     padding:18px 50px;
     margin-top:18px;
     background: #f8f4eb;
 }
 
 .store_search_form  p{
-    margin-bottom:9px;    
+    margin-bottom:9px;
 }
 .store_search_form label{
     width:80px;
@@ -254,159 +254,9 @@
     color:#fff;
     font: 18px "NanumGothicBold";
     border:1px solid #ddd;
-    border-radius:5px;    
+    border-radius:5px;
     cursor: pointer;
 }
-
-
-
-/*오픈예정점*/
-.store_list{
-    width:100%;
-}
-
-.store_list li{
-    height:108px;
-    padding:20px 30px;
-    border-top:1px solid #e0e0e0;
-    overflow: hidden
-}
-
-.store_list li.last{
-    border-bottom:1px solid #e0e0e0;
-}
-
-.store_list .thumb{
-    width:182px;
-    float:left;
-}
-.store_list .txt{
-    float:left;
-    margin:23px;
-}
-
-.store_tit{
-    font: 16px "NanumGothicBold"; 
-    margin-bottom:10px;
-}
-.store_adr,.store_tel{
-    font: 14px/1.5 "NanumGothic"; 
-    color:#252525;
-}
-
-.store_list .txt a:hover{
-    text-decoration: underline;
-}
-
-/*공지사항*/
-.notice .tbl{
-    margin-top:22px;
-}
-.notice .tbl th{
-    font-size:14px;
-}
-
-.notice .tbl td{
-    font-size:13px;
-}
-
-.notice .tbl .title{
-    text-align:left;
-    padding-left:5px;
-}  
-
-.notice_search{
-    float:right;
-    margin-top:-20px;
-}
-.notice_search input[type="text"]{
-    width:160px;
-    height:28px;
-    padding-left:5px;
-    border:1px solid #3a3a3c;
-    outline:0;
-}
-
-.notice_search .btn_search{
-    position: relative;
-    left:-6px;
-    width:45px;
-    height:32px;
-    background: #3a3a3c;
-    border:1px solid #3a3a3c;
-    color:#fff;
-    outline:0;
-    cursor: pointer;
-}
-
-/*테이블*/
-.tblType01{
-    width:100%;
-    border-top:2px solid #e0e0e0;
-}
-
-.tblType01 th{
-    height: 40px;
-    background: #ff6519;
-    color:#fff;
-    font: 16px "NanumGothicBold";
-    border-left:2px solid #fff;
-}
-
-.tblType01 td{
-    height:34px;
-    font: 14px "NanumGothic";
-    color:#000000;
-    border-bottom:1px solid #e0e0e0;
-}
-
-.tblType01 th, .tbl td{    
-    vertical-align:middle;
-    text-align:center;
-}
-
-.tblType01  a:hover{
-    text-decoration: underline;
-} 
-
-
-
-.tblType02{
-    width:100%;
-}
-
-.tblType02 thead th{
-    height: 40px;
-    background: #ff6519;
-    color:#fff; 
-    font: 16px "NanumGothicBold";
-}
-
-.tblType02 tbody th{
-    background: #efefef
- }
-
-.tblType02 td{
-    height:40px;
-    font: 14px "NanumGothic";
-    background:#f6f6f6;
-    border-bottom:1px solid #e0e0e0;
-}
-
-.tblType02 tbody th,.tblType02 tbody td, .tblType02 tfoot td{
-    color:#58585a;
-    font: 14px/1.5 "NanumGothicBold";
-}
-
-.tblType02 th, .tblType02 td{    
-    vertical-align:middle;
-    text-align:center;
-    border:2px solid #fff;
-}
-.tblType02 tfoot td{
-    background: #e0e0e0
-}
-
 
 
 /*페이징*/
@@ -471,8 +321,8 @@
 .procedure .step02 .content li+li{margin-top:32px;}
 .procedure .step02 .content ol{overflow: hidden}
 .procedure .step02 .content ol li{
-    float:left; 
-    margin-top:5px;  
+    float:left;
+    margin-top:5px;
     padding-left:12px;
     background: url(../images/dot_orange.gif) no-repeat 0 50%
 }
@@ -581,112 +431,4 @@
     padding-left:14px;
     background:url(../images/dot_orange.gif) no-repeat 0 10px;
     letter-spacing: -1px
-}
-
-
-
-/*무한리필*/
-#refill_area{
-    position: relative;
-    width:950px;
-    float:left;
-    z-index: 100;
-    background:url(../images/bg_refill.png) 0 0 repeat;
-}
-
-.ask_box{
-    width:910px;
-    margin:45px 20px 30px  20px;
-    background-color:#faf3e9;
-}
-.policy{
-    width:850px;
-    margin:0 auto;
-    padding:50px 0 40px;
-    border-bottom:2px solid #9b1e28;
-}
-
-.policy h3{
-    font: 14px "NanumGothicBold";
-    color:#757575;
-    margin-bottom:20px;
-}
-
-.policy textarea{
-    width:820px;
-    height:195px;
-    padding:15px;
-    margin-bottom:20px;
-    background: #f2efe8;
-    font: 12px/1.5 "NanumGothicBold";
-    color:#757575;
-    border:1px solid #ddd;
-}
-
-
-.policy .check label{
-    font: 12px/1.5 "NanumGothicBold";
-    color:#757575;
-}
-
-
-.ask_form{
-    width: 850px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    border-bottom:1px solid #d7d7d7;
-}
-
-.ask_form p{
-    border-top:1px solid #d7d7d7;
-}
-
-.ask_form label{
-    font: 14px/1.5 "NanumGothicBold";
-    color:#3c3c3c;
-}
-
-.ask_form .label{
-    display: inline-block;
-    width:155px;
-    padding:15px 0;
-    margin-right:15px;
-    text-align: center;
-    background: #f1eae0;
-}
-
-.ask_form input[type="text"]{
-    height:30px;
-    padding:0 5px;
-    border:1px solid #d7d7d7;
-    box-sizing: border-box;
-    background: transparent;
-}
-.ask_form select{
-    height:30px;
-    border:1px solid #d7d7d7;
-    background: transparent;
-}
-.ask_form input[type="radio"]{
-    margin-left:20px;
-    background: transparent;
-}
-
-.ask_form textarea{
-    width:100%; 
-    height:300px; 
-    margin-top:20px;
-    background:transparent; 
-    border:1px solid #d7d7d7;
-}
-
-.btn_ask_submit{
-    display: inline-block;
-    width:300px;
-    height:60px;
-    margin-top:30px;
-    background:url(../images/sub/btn_ask_submit.jpg) no-repeat 0 0;
-    text-indent: -9999px;
-    border:0;
-    cursor: pointer
 }

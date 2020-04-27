@@ -8,8 +8,6 @@ window.onload = function() {
     $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
     $("#kakao").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 
-    var tex = $(".textContainer");
-    var bgimg = $(".bgbg");
     var next = 0;
     var first = false;
     var last = false;
@@ -152,8 +150,15 @@ window.onload = function() {
             }, {
                 duration: 600,
                 complete: function() {
-                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(500);
-                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(500);
+                    if(next == 1) {
+                        elmSelecter.next().find('.bgbg').fadeIn(500);
+                        elmSelecter.next().find('.bgbg').animate({left:"-=60%"}, 500);
+                    }
+                    else if(next == -1) {
+                        elmSelecter.prev().find('.bgbg').fadeIn(500);
+                        elmSelecter.next().find('.bgbg').animate({left:"-=60%"}, 1000);
+                        //alert(elmSelecter.next().find('.bg-m').attr('src'));
+                    }
                     first = false; last = false;
                     delta=0;
                     next=0;
