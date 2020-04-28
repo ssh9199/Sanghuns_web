@@ -12,6 +12,7 @@ window.onload = function() {
     var next;
     var first = false;
     var last = false;
+    elm = ".box";
 
     $(elm).each(function(index) {
         var startY = 0,

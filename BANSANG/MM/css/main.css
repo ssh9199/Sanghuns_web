@@ -1,0 +1,43 @@
+/*********************************
+main_content
+*********************************/
+#main_content{
+    position: relative;
+    height: 100%;
+    margin-left: 210px;
+    z-index: 100;
+}
+
+#main_slide{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    height:100%;
+}
+#main_slide .slide_body{
+    position: absolute;
+    width:100%;
+    height:300%;
+}
+#main_slide .slide_body li{
+    position: relative;
+    width:100%;
+    height:25%;
+}
+#main_slide .slide_body li img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    vertical-align:top
+}
+#main_slide .slide_body li .txt{
+    z-index:10
+}
+#main_slide .slide_body li .img_bk{
+    z-index:9
+}
+#main_slide .slide_body li .img_color{
+    z-index:8
+}

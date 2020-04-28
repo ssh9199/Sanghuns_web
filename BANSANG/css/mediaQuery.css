@@ -6,9 +6,11 @@
             height: 60%;
             transform:translate(0,-53%);
         }
+
         #kakao {
             right:20%
         }
+
         .logo {
             left:20%;
         }
@@ -67,11 +69,15 @@
         width: 12%;
     }
 
+    .box .textContainer .button img{
+        width: 35%;
+    }
+
     .box .textContainer h4{
         font-size: 0.45em;
     }
 
-    #scro {
+    nav#scro {
         left:10%;
     }
 

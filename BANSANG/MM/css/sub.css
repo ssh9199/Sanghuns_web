@@ -1,0 +1,434 @@
+/*좌측 롤링배너*/
+#right_banner{
+    position: fixed;
+    top:0;
+    left:1370px;
+    width:800px;
+    height: 100%;
+}
+
+#right_banner .rolling_banner{
+    position: relative;
+    float:left;
+    width:400px;
+}
+#right_banner .rolling_banner img{vertical-align:top}
+
+.sub_heading{
+    position: relative;
+    height:95px;
+    width:830px;
+    border-bottom:1px solid #000;
+}
+.sub_heading h2{
+    margin-bottom:7px
+}
+.sub_heading .location{
+    position: absolute;
+    bottom:15px;
+    right:0;
+    font: 12px "NanumGothicBold";
+    color:#97938e;
+}
+
+/*브랜드스토리*/
+.intro{height:390px;}
+.brand{height:580px}
+.cibi{height:612px;}
+.organization{height:578px}
+
+.intro h3{
+    margin-bottom:30px;
+    height:75px;
+}
+.intro img{
+    float:left;
+    margin-right:15px;
+}
+.intro p{
+    font: 16px/20px "NanumGothicBold";
+    color:#3a3a3c;
+    letter-spacing: -0.7px;
+}
+.intro p strong{color:#ff6519;}
+
+.brand .txt_brand{ margin-left:45px}
+
+.cibi h4{margin:50px 0 22px 58px;}
+.cibi .slogan{
+    width:720px;
+    height:130px;
+    background:url(../images/sub/bg_slogan.jpg) no-repeat 0 0;
+    margin-left:58px;
+}
+.cibi .slogan img{margin: 15px 0 0 192px}
+.cibi .bi{
+    position: relative;
+    width:720px;
+    height:196px;
+    background:url(../images/sub/bg_bi.jpg) no-repeat 0 0;
+    margin-left:58px;
+}
+.cibi .bi .img_01{
+    position: absolute;
+    top:10px;
+    left:105px;
+}
+.cibi .bi .img_02{
+    position: absolute;
+    top:38px;
+    left:276px;
+}
+.organization img{
+    margin-left:77px;
+}
+
+/*인테리어*/
+.interior{
+    position: relative;
+    height: 200px;
+    padding-left:300px;
+}
+.interior > img{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.interior p{
+    font: 15px/1.5 "NanumGothicBold";
+    color:#434343;
+    letter-spacing: -0.7px;
+    margin-top:15px;
+}
+.interior p strong{color:#ff6519;}
+
+.interior2d{height:768px}
+.interior2d h3, .vr h3{
+    margin-bottom:23px
+}
+
+/*오시는길*/
+.box_map{
+    margin-top:30px;
+    height:550px;
+    background:#f8f4eb;
+    padding:38px 42px 0 42px
+}
+.box_map h4{
+    margin-top:25px;
+    font:18px/2.0  "NanumGothicBold";
+    color:#252525;
+}
+.box_map ul li{
+    font:16px/1.5  "NanumGothicBold";
+    color:#252525;
+    background:url(../images/dot_orange.gif) no-repeat 0 50%;
+    padding-left:15px
+}
+
+
+/*무아몽메뉴*/
+.menulist ul{
+    margin-top:30px;
+    overflow: hidden
+}
+.menulist ul li{
+    width:400px;
+    height:260px;
+    float:left;
+    margin-bottom:50px;
+}
+.menulist ul li:nth-child(2n){
+    margin-left:30px;
+}
+.menulist ul a{
+  display: block;
+  width:400px;
+  height:225px;
+  border-radius:10px;
+  overflow:hidden;
+  position: relative;
+  z-index: 10;
+
+}
+.menulist p{
+    font: 16px "NanumGothicBold";
+    color:#3a3a3c;
+    margin-top:18px;
+    text-align:center;
+    padding-left:10px;
+    letter-spacing: -1px
+
+}
+.menulist p:before{
+    position: relative;
+    top:2px;
+    left:-10px;
+    content:" ";
+    display: inline-block;
+    width:15px;
+    height:15px;
+    background: url(../images/sub/dot-ring-orange.png) no-repeat 0 0
+}
+
+.menulist ul a img{
+  transition:all 0.3s;
+  overflow:hidden;
+}
+
+.menulist ul a:hover img{
+  transform:scale(1.05)
+}
+
+.bisual_pizza{margin-top:55px;}
+
+/*매장찾기*/
+.search_store{
+    position: relative;
+    height:340px;
+    margin-top:25px;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+}
+
+.search_map{
+    position: absolute;
+    top:25px;
+    left:68px;
+}
+
+.search_form_wrap{
+    position: relative;
+    width:420px;
+    left: 345px;
+    top:40px ;
+}
+
+.h4_search{
+    font:16px/2.0 "NanumGothicBold";
+    color:#ff6519;
+}
+.desc_search{
+    font:16px/1.5 "NanumGothicBold";
+    color:#3a3a3c;
+    letter-spacing: -0.5px
+}
+
+.store_search_form fieldset{
+    display: block;
+    width:318px;
+    height:78px;
+    padding:18px 50px;
+    margin-top:18px;
+    background: #f8f4eb;
+}
+
+.store_search_form  p{
+    margin-bottom:9px;
+}
+.store_search_form label{
+    width:80px;
+    height:20px;
+    display: inline-block;
+    font: 13px/20px "NanumGothicBold";
+    color:#3a3a3c;
+}
+
+.store_search_form select{
+    width:230px;
+    height:20px;
+    padding-left:5px;
+    font-size:13px;
+    border:1px solid #c4c4c3;
+}
+
+.store_search_form .p_submit{
+    text-align: center
+}
+
+.store_search_form .btn_submit{
+    width:185px;
+    height:40px;
+    background-color: #ff6519;
+    margin-top:20px;
+    color:#fff;
+    font: 18px "NanumGothicBold";
+    border:1px solid #ddd;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+
+/*페이징*/
+.paging{
+    margin-top:25px;
+    text-align: center;
+}
+.paging a{
+    display: inline-block;
+    padding:5px;
+    color:#3c3c3c;
+    font-size:14px;
+}
+
+.paging .btn_prev img, .paging .btn_next img{
+    margin-bottom:1px;
+}
+
+
+/*창업안내*/
+.success{height:515px;}
+.success p{
+    font: 16px "NanumGothicBold";
+    color:#3a3a3c;
+    letter-spacing: -0.5px
+}
+.success  .img_success{
+    height: 300px;
+    background:url(../images/sub/guide/img_success.png) no-repeat  0 0;
+    text-indent: -9999em;
+}
+
+.procedure{
+    font: 14px "NanumGothicBold";
+    color:#3a3a3c;
+}
+.procedure .txt_step{
+    font: 16px/22px "NanumGothicBold";
+    color:#3a3a3c;
+}
+.procedure strong{color:#ff6519;}
+.procedure .txt_step{margin-top:6px;}
+
+.procedure .step01 .content{
+    width:720px;
+    height:250px;
+    margin:45px 0 50px 55px;
+    text-indent:-9999em;
+    background:url(../images/sub/guide/img_step_01.png) no-repeat  0 0;
+}
+
+.procedure .step02 .content{
+    width:612px;
+    height:270px;
+    margin:45px 0 50px 55px;
+    padding:56px 58px;
+    background:url(../images/sub/guide/img_step_02.png) no-repeat  0 0;;
+}
+
+
+.procedure .step02 .content span{color:#ff6519;}
+.procedure .step02 .content li+li{margin-top:32px;}
+.procedure .step02 .content ol{overflow: hidden}
+.procedure .step02 .content ol li{
+    float:left;
+    margin-top:5px;
+    padding-left:12px;
+    background: url(../images/dot_orange.gif) no-repeat 0 50%
+}
+.procedure .step02 .content .ss01 ol li,
+.procedure .step02 .content .ss04 ol li{width:27%;}
+.procedure .step02 .content .ss02 ol li,
+.procedure .step02 .content .ss03 ol li{width:45%;}
+
+
+.procedure .step03 .content{
+    width:720px;
+    height:580px;
+    margin:45px 0 50px 55px;
+    text-indent: -999px;
+    background:url(../images/sub/guide/img_step_03.png) no-repeat  0 0;;
+}
+
+.procedure .step04 .content{
+    width:604px;
+    height:175px;
+    margin:45px 0 50px 55px;
+    padding:70px 58px;
+    background:url(../images/sub/guide/img_step_04.png) no-repeat  0 0;;
+}
+
+.procedure .step04 .content dt{
+    color:#ff6519;
+    margin-top:20px;
+}
+.procedure .step04 .content dt.first{margin-top:0;}
+.procedure .step04 .content dd{
+    margin-top:5px;
+    padding-left:14px;
+    background: url(../images/dot_orange.gif) no-repeat 0 9px;
+    line-height: 18px
+}
+
+.procedure .step05 .content{
+    width:557px;
+    height:805px;
+    margin:45px 80px 50px 55px;
+    padding:55px 58px 0 105px;
+    background:url(../images/sub/guide/img_step_05.png) no-repeat  0 0;
+}
+.procedure .step05 .content h6{
+    font-size:16px;
+    color:#ff6519;
+    margin:23px 0 8px;
+}
+.procedure .step05 .content h6.first{
+    margin-top:0;
+}
+.procedure .step05 .content li{
+    padding-left:14px;
+    background: url(../images/dot_orange.gif) no-repeat 0 9px;
+    line-height: 22px
+}
+.procedure .step05 .content .has_sub li{
+    background: none
+}
+
+.procedure .step05 .content .has_sub ul{
+    margin-left:30px;
+    margin-top:-22px;
+}
+
+.procedure .step06 .content{
+    width:830px;
+    height:570px;
+    margin:45px 0 50px 0px;
+    background:url(../images/sub/guide/img_step_06.png) no-repeat  0 0;
+    text-indent: -9999em
+}
+
+.open_price .tbl{
+    width:720px;
+    margin:57px auto 0;
+}
+
+.open_price .info{
+    width:720px;
+    margin:10px auto 48px;
+    padding-left:15px;
+    font:12px/1.5 "NanumGothicBold";
+    color:#7c766f;
+}
+
+.qna .content{
+    width:655px;
+    height:1480px;
+    margin:50px auto 0;
+    padding:65px 0 0 70px;
+    background:url(../images/sub/guide/img_qna.png) no-repeat  0  0;
+}
+.qna .content li{
+    margin-bottom:35px;
+}
+.qna .content h4{
+    font:16px "NanumGothicBold";
+    color:#ff6519;
+    margin-bottom:9px;
+}
+.qna .content li p{
+    font:14px/1.7 "NanumGothicBold";
+    color:#3a3a3c;
+    padding-left:14px;
+    background:url(../images/dot_orange.gif) no-repeat 0 10px;
+    letter-spacing: -1px
+}

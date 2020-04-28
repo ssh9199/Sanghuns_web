@@ -82,7 +82,7 @@ nav#scro {
     z-index: 100;
     position: fixed;
     bottom:20px;
-    right: 45%;
+    left: 25%;
     height: auto;
     width: auto;
     display: flex;
@@ -176,15 +176,16 @@ nav#scro {
     color:#555555;
 }
 
-.textContainer img{
+
+.box .textContainer img{
     z-index: 9999;
-    width: 70px;
+    width: 35%;
     min-width: 40px;
 }
 
-.textContainer .button{
+.box .textContainer .link img{
     z-index: 9999;
-    width: 70px;
+    width: 10%;
     min-width: 40px;
 }
 
@@ -222,7 +223,7 @@ nav#scro {
 
 #page3 .bg-m{
     bottom:23%;
-    transform: translate(+50%,0);
+    transform: translate(0%,0);
     min-width: 150px;
     max-width: 250px;
     width:45%;

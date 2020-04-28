@@ -10,13 +10,13 @@
 
 
      /* ------------ Smooth Scrolling ------------ */
-     $('.button_1').on('click', function(e) {
+     $('.smoothScroll').on('click', function(e) {
          e.preventDefault();
 
          var target = this.hash,
              $target = $(target);
 
-         
+
 
          $('html, body').stop().animate({
              'scrollTop': $target.offset().top
