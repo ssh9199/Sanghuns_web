@@ -38,8 +38,18 @@ window.onload = function() {
                 last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
                     next = elmSelecter.next();
-                    if (!last) elmSelecter.find('.bgbg').fadeOut(600);
-                    else elmSelecter.find('.bgbg').fadeIn(600);
+                    if (!last) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "100%"
+                        }, 600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "40%"
+                        }, 600);
+                    }
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
@@ -48,8 +58,18 @@ window.onload = function() {
                 first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
                     next = elmSelecter.prev();
-                    if (!first) elmSelecter.find('.bgbg').fadeOut(600);
-                    else elmSelecter.find('.bgbg').fadeIn(600);
+                    if (!first) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "100%"
+                        }, 600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "40%"
+                        }, 600);
+                    }
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
@@ -112,8 +132,19 @@ window.onload = function() {
                 last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
                     next = elmSelecter.next();
-                    if (!last) elmSelecter.find('.bgbg').fadeOut(600);
-                    else elmSelecter.find('.bgbg').fadeIn(600);
+                    if (!last) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "100%"
+                        }, 600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "40%"
+                        }, 600);
+                    }
+
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
@@ -122,8 +153,19 @@ window.onload = function() {
                 first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
                     next = elmSelecter.prev();
-                    if (!first) elmSelecter.find('.bgbg').fadeOut(600);
-                    else elmSelecter.find('.bgbg').fadeIn(600);
+                    if (!first) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "100%"
+                        }, 600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({
+                            left: "40%"
+                        }, 600);
+                    }
+
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
@@ -202,7 +244,7 @@ window.onload = function() {
                     } else {
                         elmSelecter.find('.bgbg').fadeIn(600);
                         elmSelecter.find('.bg-m').animate({
-                            left: "50%"
+                            left: "40%"
                         }, 600);
                     }
                     try {
@@ -222,7 +264,7 @@ window.onload = function() {
                     } else {
                         elmSelecter.find('.bgbg').fadeIn(600);
                         elmSelecter.find('.bg-m').animate({
-                            left: "50%"
+                            left: "40%"
                         }, 600);
                     }
                     try {
