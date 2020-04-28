@@ -1,4 +1,5 @@
 var elm = ".box";
+var elmSelecter;
 $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 $("#kakao").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 
@@ -8,7 +9,7 @@ window.onload = function() {
     $(".body").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
     $("#kakao").on("scroll touchmove mousewheel DOMMouseScroll", function(e){e.preventDefault();});
 
-    var next = 0;
+    var next;
     var first = false;
     var last = false;
 
@@ -21,13 +22,13 @@ window.onload = function() {
         $(this).on('touchend', function(event) {
             endY = event.originalEvent.changedTouches[0].screenY;
             var moveTop = $(window).scrollTop();
-            var elmSelecter = $(elm).eq(index);
+            elmSelecter = $(elm).eq(index);
             if (startY - endY > 50) { // 아래로
                 last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
                     next=1;
-                    if(!last) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    if(!last) elmSelecter.find('.bgbg').fadeOut(600);
+                    else elmSelecter.find('.bgbg').fadeIn(600);
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
@@ -36,8 +37,8 @@ window.onload = function() {
                 first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
                     next=-1;
-                    if(!first) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    if(!first) elmSelecter.find('.bgbg').fadeOut(600);
+                    else elmSelecter.find('.bgbg').fadeIn(600);
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
@@ -47,10 +48,10 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 400,
+                duration: 900,
                 complete: function() {
-                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(500);
-                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(500);
+                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(600);
+                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(600);
                     first = false; last = false;
                     startY=0; endY=0;
                 }
@@ -67,13 +68,13 @@ window.onload = function() {
         $(this).on('mouseup', function(event) {
             mendY = event.pageY;
             var moveTop = $(window).scrollTop();
-            var elmSelecter = $(elm).eq(index);
+            elmSelecter = $(elm).eq(index);
             if (mstartY - mendY > 50) {
                 last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
                     next=1;
-                    if(!last) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    if(!last) elmSelecter.find('.bgbg').fadeOut(600);
+                    else elmSelecter.find('.bgbg').fadeIn(600);
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (event) {}
@@ -82,8 +83,8 @@ window.onload = function() {
                 first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
                     next=-1;
-                    if(!first) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    if(!first) elmSelecter.find('.bgbg').fadeOut(600);
+                    else elmSelecter.find('.bgbg').fadeIn(600);
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (event) {}
@@ -93,10 +94,10 @@ window.onload = function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 400,
+                duration: 900,
                 complete: function() {
-                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(500);
-                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(500);
+                    if(next == 1) elmSelecter.next().children(0).children(0).fadeIn(600);
+                    else if(next == -1) elmSelecter.prev().children(0).children(0).fadeIn(600);
                     first = false; last = false;
                     startY=0; endY=0;
                 }
@@ -119,15 +120,21 @@ window.onload = function() {
                 delta = -event.detail / 3;
 
             var moveTop = $(window).scrollTop();
-            var elmSelecter = $(elm).eq(index);
+            elmSelecter = $(elm).eq(index);
 
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
                 last = index > 4;
                 if ($(elmSelecter).next() != undefined) {
-                    next=1;
-                    if(!last) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    next = elmSelecter.next();
+                    if(!last) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({left: "100%"},600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({left: "50%"},600);
+                    }
                     try {
                         moveTop = $(elmSelecter).next().offset().top;
                     } catch (e) {}
@@ -136,29 +143,50 @@ window.onload = function() {
             } else if(delta >0) {
                 first = index < 2;
                 if ($(elmSelecter).prev() != undefined) {
-                    next=-1;
-                    if(!first) elmSelecter.find('.bgbg').fadeOut(300);
-                    else elmSelecter.find('.bgbg').fadeIn(500);
+                    next = elmSelecter.prev();
+                    if(!first) {
+                        elmSelecter.find('.bgbg').fadeOut(600);
+                        elmSelecter.find('.bg-m').animate({left: "100%"},600);
+                    }
+                    else {
+                        elmSelecter.find('.bgbg').fadeIn(600);
+                        elmSelecter.find('.bg-m').animate({left: "50%"},600);
+                    }
                     try {
                         moveTop = $(elmSelecter).prev().offset().top;
                     } catch (e) {}
                 }
             }
 
+            var a_pos;
+            var a_speed;
+
+            switch(next.children(0).attr('id')) {
+                case 'home' :
+                    a_pos = {left: '40%'};
+                    a_speed = 1000;
+                    break;
+                case 'page1' :
+                    a_pos = {left: '40%'};
+                    a_speed = 800;
+                    break;
+                case 'page2' :
+                    a_pos = {left: '50%'};
+                    a_speed = 600;
+                    break;
+                case 'page3' :
+                    a_pos = {left: '55%'};
+                    a_speed = 1000;
+                    break;
+            }
+
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 600,
+                duration: 900,
                 complete: function() {
-                    if(next == 1) {
-                        elmSelecter.next().find('.bgbg').fadeIn(500);
-                        elmSelecter.next().find('.bgbg').animate({left:"-=60%"}, 500);
-                    }
-                    else if(next == -1) {
-                        elmSelecter.prev().find('.bgbg').fadeIn(500);
-                        elmSelecter.next().find('.bgbg').animate({left:"-=60%"}, 1000);
-                        //alert(elmSelecter.next().find('.bg-m').attr('src'));
-                    }
+                    next.find('.bgbg').fadeIn(600);
+                    next.find('.bg-m').animate( a_pos, a_speed);
                     first = false; last = false;
                     delta=0;
                     next=0;

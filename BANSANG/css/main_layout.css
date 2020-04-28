@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 /*---------------------*/
 
-#home, #page1, #page2, #page3, #footer {
+#home, #page1-sub, #page1, #page2, #page3, #footer {
     position: relative;
     width: 100%;
     background-size: cover !important;
@@ -90,7 +90,7 @@ nav#scro {
 }
 
 .toIgnoreScro {
-    z-index:200;
+    z-index:100;
     position:relative;
     width:100%;
     height:100%;
@@ -115,12 +115,14 @@ nav#scro {
     height: 50%;
     transform:translate(0,-50%);
     text-align: left;
+    z-index: 300;
 }
 
 #home {
     background: #000000 url(../images/bg/background-desktop.png) no-repeat top center;
 }
-    .textContainer {
+
+.textContainer {
     position:absolute;
     color: #fff;
     left:25%;
@@ -129,6 +131,7 @@ nav#scro {
     transform:translate(0,-59%);
     text-align: left;
 }
+
 .box .textContainer h1{
     font-family: 'BM', sans-serif;
     font-size: 0.8em;
@@ -162,13 +165,6 @@ nav#scro {
     color:#555555;
 }
 
-.box .textContainer img{
-    width: 15%;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    max-width: : 90px;
-    height:auto;
-}
 
 .box .textContainer h4{
     color:inherit;
@@ -180,23 +176,44 @@ nav#scro {
     color:#555555;
 }
 
+.textContainer img{
+    z-index: 9999;
+    width: 70px;
+    min-width: 40px;
+}
+
+.textContainer .button{
+    z-index: 9999;
+    width: 70px;
+    min-width: 40px;
+}
+
 .bgbg{
     background-size: cover !important;
     -webkit-background-size: cover !important;
 }
+
 .bg-m {
     z-index: 0;
     position: absolute;
+    left:100%;
     bottom: 0;
-    right:23%;
     width:30%;
     min-width: 700px;
     max-width: 1000px;
 
 }
 
-#page2 .bg-m{
+#page1 .bg-m{
     right:15%;
+}
+
+#page1-sub .textContainer{
+    background: #fff;
+    color: #000;
+}
+
+#page2 .bg-m{
     bottom:20%;
     min-width: 200px;
     max-width: 300px;
@@ -205,8 +222,8 @@ nav#scro {
 
 #page3 .bg-m{
     bottom:23%;
-    right:15%;
-    min-width: 200px;
-    max-width: 400px;
+    transform: translate(+50%,0);
+    min-width: 150px;
+    max-width: 250px;
     width:45%;
 }

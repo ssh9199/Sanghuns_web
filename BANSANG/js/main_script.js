@@ -10,11 +10,13 @@
 
 
      /* ------------ Smooth Scrolling ------------ */
-     $('.smoothscroll').on('click', function(e) {
+     $('.button_1').on('click', function(e) {
          e.preventDefault();
 
          var target = this.hash,
              $target = $(target);
+
+         
 
          $('html, body').stop().animate({
              'scrollTop': $target.offset().top
@@ -25,9 +27,9 @@
 
      /* ------------ Height resize ------------ */
 
-     var resizing_contents = ['#home', '#page1', '#page2', '#page3', '#footer'];
+     var resizing_contents = ['#home', '#page1', '#page1-sub', '#page2', '#page3', '#footer'];
 
-     for(var i=0 ; i<resizing_contents.length ; ++i){
+     for (var i = 0; i < resizing_contents.length; ++i) {
          $(resizing_contents[i]).css({
              'height': $(window).height()
          });
@@ -36,18 +38,22 @@
          $('body').css({
              'width': $(window).width()
          });
-         for(var i=0 ; i<resizing_contents.length ; ++i){
+         for (var i = 0; i < resizing_contents.length; ++i) {
              $(resizing_contents[i]).css({
                  'height': $(window).height()
              });
          }
+
      });
 
-     /* ------------ fadeout initially ------------ */
-    $('#home').fadeOut(0);
-    $(document).find('.bgbg').fadeOut(0);
-    $('#home').fadeIn(1200);
-    $('#home').find('.bgbg').fadeIn(1200);
+     /* ------------ fade initially ------------ */
+     $('#home').fadeOut(0);
+     $(document).find('.bgbg').fadeOut(0);
+     $('#home').fadeIn(1200);
+     $('#home').find('.bgbg').fadeIn(1200);
+     $('#home').find('.bg-m').animate({
+         left: '40%'
+     }, 1200);
 
 
  });

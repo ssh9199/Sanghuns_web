@@ -17,9 +17,6 @@
             right:20%;
             transform:translate(-120px,-50%);
         }
-        .bg-m {
-            right:9%;
-        }
 
         .box .textContainer h3{
             font-size: 0.37em;
@@ -81,7 +78,6 @@
     #home .bg-m {
         position: absolute;
         bottom: 0;
-        left:12%;
         width:60%;
         min-width: 500px;
         max-width: 700px;
@@ -89,16 +85,22 @@
     #page1 .bg-m {
         position: absolute;
         bottom: 0;
-        left:15%;
         width:60%;
         min-width: 500px;
         max-width: 700px;
     }
 
+    #page2 .bg-m {
+        position: absolute;
+        bottom: 60px;
+        width:250px;
+        min-width: 200px;
+        max-width: 500px;
+    }
+
     #page3 .bg-m{
         bottom:15%;
-        left:50%;
-        transform: translate(-45%,0);
+        transform: translate(-50%,0);
         min-width: 200px;
         max-width: 230px;
         width:40%;
